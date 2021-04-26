@@ -1,0 +1,10 @@
+.signInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.signInput > input {
+  height: 40px;
+}
