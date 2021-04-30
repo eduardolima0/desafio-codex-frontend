@@ -1,9 +1,29 @@
+import "./styles.css";
+
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div id="header">
+      <div class="topnav">
+      <a class="inicial" href="/home">Home</a>
+      <a class="direcionar" href="/login">Entrar</a>
+      </div>
+      <img src="logofinal.png" alt="logo" width="320px" height="120px"  />
+      <div id="homecentral">
+
+        <div id="homebox">
+          
+          
+         <h3>Gerencie sua rotina em tempo real</h3>
+         <h3>Adicione,remova e organize<br></br>suas tarefas por ordem de prioridade</h3>
+       </div>
+
+            <div id="cliente">
+              <a href="/login">Comece agora mesmo</a>
+
+            </div>
+      </div>
     </div>
   );
-};
+  };
 
 export default Home;

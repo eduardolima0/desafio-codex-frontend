@@ -3,6 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #583d72;
+   transition: all .5s;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(255,255,255,.4) 49%);
 }
 
 #loginBox {
@@ -26,4 +29,6 @@
 #loginBox a {
   font-weight: 600;
   margin-top: 10px;
+  color: black;
 }
+
