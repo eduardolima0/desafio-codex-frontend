@@ -89,7 +89,7 @@ const Login = (props) => {
         />
         <InvalidityMsg msg={password.invalidity} />
         <a href="/senha">Esqueceu sua senha?</a>
-        <SignButtom onClick={submit} text="ENTRAR" />
+        <SignButtom href="/notes" onClick={submit} text="ENTRAR" />
         <a href="/signup">Cadastre-se</a>
       </div>
     </div>

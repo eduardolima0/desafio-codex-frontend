@@ -1,7 +1,7 @@
 const Senha = () => {
     return (
-      <div>
-        <h1>Home</h1>
+      <div id="recover">
+        <h1>esqueci a senha</h1>
       </div>
     );
   };

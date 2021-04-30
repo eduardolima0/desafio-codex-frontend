@@ -89,7 +89,7 @@ const Signup = (props) => {
         />
         <InvalidityMsg msg={password.invalidity} />
         <a href="/login">Já possui uma conta? Faça login</a>
-        <SignButtom onClick={submit} text="ENTRAR" />
+        <SignButtom onClick={submit} text="CADASTRE-SE" />
       </div>
     </div>
   );

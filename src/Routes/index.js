@@ -3,6 +3,7 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Home from "../pages/Home";
 import Senha from "../pages/Senha";
+import Notes from "../pages/Notes"
 
 const Routes = () => (
   <Switch>
@@ -10,6 +11,7 @@ const Routes = () => (
     <Route path="/signup" component={Signup} />
     <Route path="/" component={Home} />
     <Route path="/senha" component={Senha} />
+    <Route path="/task" component={Notes}/> 
   </Switch>
 );
 

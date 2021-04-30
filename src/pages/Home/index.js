@@ -14,7 +14,7 @@ const Home = () => {
           
           
          <h3>Gerencie sua rotina em tempo real</h3>
-         <h3>Adicione,remova e organize<br></br>suas tarefas por ordem de prioridade</h3>
+         <h3>Adicione e organize<br></br>suas tarefas por ordem de prioridade</h3>
        </div>
 
             <div id="cliente">
