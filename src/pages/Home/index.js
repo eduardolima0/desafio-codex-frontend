@@ -3,9 +3,9 @@ import "./styles.css";
 const Home = () => {
   return (
     <div id="header">
-      <div class="topnav">
-      <a class="inicial" href="/home">Home</a>
-      <a class="direcionar" href="/login">Entrar</a>
+      <div className="topnav">
+      <a className="inicial" href="/home">Home</a>
+      <a className="direcionar" href="/login">Entrar</a>
       </div>
       <img src="logofinal.png" alt="logo" width="320px" height="120px"  />
       <div id="homecentral">

@@ -42,7 +42,7 @@ const Signup = (props) => {
       // requisicao
       api
         .post(
-          "/user/signIn",
+          "/auth/login",
           { email: email.value, password: password.value },
           {
             headers: { "Content-Type": "application/json" },
@@ -58,14 +58,15 @@ const Signup = (props) => {
           props.history.push("/home");
         })
         .catch((error) => {
-          console.log(error.response);
-          const msg = error.response.data;
+          console.log('test')
+          console.log(error);
+          /*const msg = error.response.data;
 
-          // exibindo mensagem de erro que o backend retorna
+          /exibindo mensagem de erro que o backend retorna
           if (msg.indexOf("Email não cadastrado") !== -1)
             setEmail({ ...email, invalidity: "Email não cadastrado" });
           else if (msg === "Senha inválida")
-            setPassword({ ...password, invalidity: msg });
+            setPassword({ ...password, invalidity: msg }); */
         });
     }
   };

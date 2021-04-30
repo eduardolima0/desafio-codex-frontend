@@ -42,11 +42,8 @@ const Login = (props) => {
       // requisicao
       api
         .post(
-          "/user/signIn",
+          "/auth/login",
           { email: email.value, password: password.value },
-          {
-            headers: { "Content-Type": "application/json" },
-          }
         )
         .then((response) => {
           const token = response.data.token;
@@ -55,17 +52,17 @@ const Login = (props) => {
           // salvando os dados do usuario
           localStorage.setItem("user", JSON.stringify(response));
           // redirecionando para tela Home
-          props.history.push("/home");
+          props.history.push("/tasks");
         })
         .catch((error) => {
-          console.log(error.response);
-          const msg = error.response.data;
+          console.log(error);
+          /*const msg = error.response.data;
 
-          // exibindo mensagem de erro que o backend retorna
+           exibindo mensagem de erro que o backend retorna
           if (msg.indexOf("Email não cadastrado") !== -1)
             setEmail({ ...email, invalidity: "Email não cadastrado" });
           else if (msg === "Senha inválida")
-            setPassword({ ...password, invalidity: msg });
+            setPassword({ ...password, invalidity: msg });*/
         });
     }
   };
