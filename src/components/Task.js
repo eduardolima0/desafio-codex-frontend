@@ -1,22 +1,31 @@
+import React from 'react'
+
 function Task({ task, onTglStatus }) {
     return (
-      <div className="card text-left" key={task.id}>
-        <div className="row">
-          <div className="col-10">
+      <div  key={task.id}>
+        <div >
+          <div>
             <h4>{task.desc}</h4>
-            <div className="task-meta">
+            <div>
               {task.date}
             </div>
           </div>
   
-          <div className="col-2 is-center">
-          <button className="button icon-only clear"
+          <div>
+          <button
              onClick={() => onTglStatus(task)}>
-            {task.complete && "✅"}
-            {!task.complete && "⬜"}
+            {task.complete && ""}
+            {!task.complete && "Alta"}
             </button>
+
+            <button
+             onClick={() => onTglStatus(task)}>
+            {task.complete && "Baixa"}
+            {!task.complete && ""}
+            </button>
+            
           </div>
-          <div className="col-12">
+          <div>
             <p>{task.remarks}</p>
           </div>
         </div>

@@ -2,7 +2,6 @@ import "./styles.css";
 import React, {useState } from "react";
 
 import Tasks from "../../components/Tasks/tasks";
-
 import TaskEdit from "../../components/TaskEdit";
 
 function Notes() {
@@ -33,7 +32,12 @@ function Notes() {
 
   return (
     <div className="App">
-
+       <div className="topnav">
+      <a className="inicial" href="/home">Home</a>
+      <a className="direcionar" href="/auth/login">Logout</a>
+      <h4 className="usuario">Bem vindo</h4> 
+      </div>
+    
       <div className="container">
         <div className="col-12 text-right">
           <button
@@ -44,7 +48,8 @@ function Notes() {
           </button>
         </div>
         {showTaskEdit && <TaskEdit task={{}} onSaveTask={onSaveTask} />}
-        <Tasks tasks={tasks} onTglStatus={onTglStatus}></Tasks>
+        <Tasks tasks={tasks} onTglStatus={onTglStatus} ></Tasks>
+        
       </div>
       
     </div>

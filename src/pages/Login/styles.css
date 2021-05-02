@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #583d72;
+  /*background-color: #583d72;*/
    transition: all .5s;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(255,255,255,.4) 49%);
 }
@@ -32,3 +32,29 @@
   color: black;
 }
 
+.topnav {
+  background-color: #583d72;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a {
+  background-color: #ff8474;
+  color: white;
+}
+
+.topnav a.direcionar {
+  float:right
+}

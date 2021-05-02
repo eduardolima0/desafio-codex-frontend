@@ -1,3 +1,4 @@
+import React from 'react'
 import "./styles.css";
 
 const Home = () => {
@@ -5,7 +6,7 @@ const Home = () => {
     <div id="header">
       <div className="topnav">
       <a className="inicial" href="/home">Home</a>
-      <a className="direcionar" href="/login">Entrar</a>
+      <a className="direcionar" href="/auth/login">Entrar</a>
       </div>
       <img src="logofinal.png" alt="logo" width="320px" height="120px"  />
       <div id="homecentral">
@@ -18,7 +19,7 @@ const Home = () => {
        </div>
 
             <div id="cliente">
-              <a href="/login">Comece agora mesmo</a>
+              <a href="/auth/login">Comece agora mesmo</a>
 
             </div>
       </div>

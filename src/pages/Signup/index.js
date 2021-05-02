@@ -10,8 +10,15 @@ const Signup = (props) => {
   // criando os estados
   const [email, setEmail] = useState({ value: "", invalidity: "" });
   const [password, setPassword] = useState({ value: "", invalidity: "" });
+  const [name, setName] = useState({value:"", invalidity:""});
 
   // funcoes para mudar os estados
+  const changeName = (e) => {
+    const value = e.target.value;
+
+    setName({ ...name, value });
+  };
+
   const changeEmail = (e) => {
     const value = e.target.value;
 
@@ -42,8 +49,8 @@ const Signup = (props) => {
       // requisicao
       api
         .post(
-          "/auth/login",
-          { email: email.value, password: password.value },
+          "/auth/register",
+          { name: name.value, email: email.value, password: password.value },
           {
             headers: { "Content-Type": "application/json" },
           }
@@ -53,9 +60,9 @@ const Signup = (props) => {
           // salvando o token do usuario no localStorage
           localStorage.setItem("token", token);
           // salvando os dados do usuario
-          localStorage.setItem("user", JSON.stringify(response));
+          localStorage.setItem("name", JSON.stringify(response));
           // redirecionando para tela Home
-          props.history.push("/home");
+          props.history.push("/auth/login");
         })
         .catch((error) => {
           console.log('test')
@@ -76,6 +83,12 @@ const Signup = (props) => {
       <div id="loginBox">
         <span>Cadastro</span>
         <SignInput
+          value={name.value}
+          onChange={changeName}
+          label="Nome de usuário"
+          type="name"
+        />
+        <SignInput
           value={email.value}
           onChange={changeEmail}
           label="Email"
@@ -89,7 +102,7 @@ const Signup = (props) => {
           type="password"
         />
         <InvalidityMsg msg={password.invalidity} />
-        <a href="/login">Já possui uma conta? Faça login</a>
+        <a href="/auth/login">Já possui uma conta? Faça login</a>
         <SignButtom onClick={submit} text="CADASTRE-SE" />
       </div>
     </div>
